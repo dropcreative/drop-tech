@@ -56,170 +56,297 @@ ga('send', 'pageview');
         <a href="https://www.linkedin.com/company/novogen" target="_blank" class="uk-icon-medium uk-icon-hover uk-icon-linkedin"></a>
       </div>
     </div>
-    <nav class="uk-navbar uk-navbar-attached" data-uk-sticky>
-      <a class="logo" href="<?php bloginfo('url'); ?>">
-        <img src="<?php echo get_bloginfo('template_directory');?>/img/logo.png" alt="CanTx web site">
-      </a>
 
-      <?php
+   <!--START NAVIGATION -->
+<nav class="uk-navbar uk-navbar-attached" data-uk-sticky>
+            <a class="logo" href="index.html">
+                <img src="img/novogen-logo.svg" alt="Novogen web site">
+            </a>
+            <ul class="uk-navbar-nav uk-navbar-flip uk-visible-large">
+                <li class="menu-item">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="menu-item" data-uk-dropdown>
+                    <a href="about.html">About</a>
+                    <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-small">
+                        <ul class="uk-nav uk-nav-navbar">
+                            <li>
+                                <a href="history.html">Our Story</a>
+                            </li>
+                            <li>
+                                <a href="vision.html">Vision</a>
+                            </li>
+                            <li>
+                                <a href="vision.html#ethos">Ethos</a>
+                            </li>
+                            <li>
+                                <a href="theboard.html">Board</a>
+                            </li>
+                            <li>
+                                <a href="management.html">Management</a>
+                            </li>
+                            <li>
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="careers.html">Careers</a>
+                            </li>
+                            <li>
+                                <a href="pdf/AnisinaHistoryOfCommunitySupport.pdf" target="_blank">Community</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item" data-uk-dropdown>
+                    <a href="programs.html">Programs</a>
+                    <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-small">
+                        <ul class="uk-nav uk-nav-navbar">
+                            <li>
+                                <a href="programs.html">PIPELINE</a>
+                            </li>
+                            <li>
+                                <a href="pdf/cantrixil.pdf" target="_blank">CANTRIXIL</a>
+                            </li>
+                            <li>
+                                <a href="pdf/trilexium.pdf" target="_blank">TRILEXIUM</a>
+                            </li>
+                            <li>
+                                <a href="pdf/Anisina.pdf" target="_blank">ANISINA</a>
+                            </li>
+                            <li>
+                                <a href="pdf/Jacob_Hope.pdf" target="_blank">PROJECT JACOB HOPE</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item" data-uk-dropdown>
+                    <a href="investors.html">Investors</a>
+                    <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-small">
+                        <ul class="uk-nav uk-nav-navbar">
+                            <li>
+                                <a href="meip.html">MEIP IN-SPECIE DISTRIBUTION</a>
+                            </li>
+                            <li>
+                                <a href="corporate-governance.html">CORPORATE GOVERNANCE</a>
+                            </li>
+                            <li>
+                                <a href="shares.html">SHARE PRICE</a>
+                            </li>
 
-$defaults = array(
-  'theme_location'  => 'primary-menu',
-  'menu'            => '',
-  'container'       => false,
-  'container_class' => '',
-  'container_id'    => '',
-  'menu_class'      => 'uk-navbar-nav uk-navbar-flip uk-hidden-small',
-  'menu_id'         => '',
-  'echo'            => true,
-  'fallback_cb'     => 'wp_page_menu',
-  'before'          => '',
-  'after'           => '',
-  'link_before'     => '',
-  'link_after'      => '',
-  'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-  'depth'           => 0,
-  'walker'          => new walker_uikits(),
+                            <li>
+                                <a href="http://www.nasdaq.com/symbol/nvgn/sec-filings" target="_blank">SEC FILINGS</a>
+                            </li>
+                            <li>
+                                <a href="http://www.asx.com.au/asx/statistics/announcements.do?by=asxCode&asxCode=NRT&timeframe=D&period=M6" target="_blank">ASX ANNOUNCEMENTS</a>
+                            </li>
 
-);
+                            <li>
+                                <a href="pdf/ExerciseofNovogenOptionsDepositInstructions.pdf" target="_blank">BOOKBUILD OPTIONS</a>
+                            </li>
+                            <li>
+                                <a href="pdf/Rights_Issue_Exercise_Option_Form.pdf" target="_blank">RIGHTS ISSUE OPTIONS</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item" data-uk-dropdown>
+                    <a href="media.html">Publications</a>
+                    <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-small">
+                        <ul class="uk-nav uk-nav-navbar">
+                            <li>
+                                <a href="media.html">MEDIA</a>
+                            </li>
+                            <li>
+                                <a href="news.html">NEWS</a>
+                            </li>
+                            <li>
+                                <a href="latest-presentations.html">LATEST PRESENTATIONS</a>
+                            </li>
+                            <li>
+                                <a href="abstracts.html">ABSTRACTS &amp; POSTERS</a>
+                            </li>
+                            <li>
+                                <a href="analyst-reports.html">ANALYST REPORTS</a>
+                            </li>
+                            <li>
+                                <a href="annual-reports.html">ANNUAL REPORTS</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <a href="#mobi-nav" class="uk-navbar-toggle uk-hidden-large uk-float-right" data-uk-offcanvas><span id="show-hamburger-only" >MENU </span></a>
+        </nav>
 
-wp_nav_menu( $defaults );
-
-
-    ?>
-
+        <!-- START OFFCANVAS NAVIGATION -->
+        <div id="mobi-nav" class="uk-offcanvas">
+            <div class="uk-offcanvas-bar">
+                <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+                    <li>
+                        <a href="">MENU</a>
+                    </li>
+                    <li class="uk-active">
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li class="uk-parent">
+                        <a href="#">ABOUT</a>
+                        <ul class="uk-nav-sub">
+                            <li>
+                                <a href="about.html">ABOUT PAGE</a>
+                            </li>
+                            <li>
+                                <a href="history.html">OUR STORY</a>
+                            </li>
+                            <li>
+                                <a href="vision.html">VISION</a>
+                            </li>
+                            <li>
+                                <a href="vision.html#ethos">ETHOS</a>
+                            </li>
+                            <li>
+                                <a href="theboard.html">BOARD</a>
+                            </li>
+                            <li>
+                                <a href="management.html">MANAGEMENT</a>
+                            </li>
+                            <li>
+                                <a href="privacy-policy.html">PRIVACY POLICY</a>
+                            </li>
+                            <li>
+                                <a href="careers.html">CAREERS</a>
+                            </li>
+                            <li>
+                                <a href="pdf/AnisinaHistoryOfCommunitySupport.pdf" target="_blank">COMMUNITY</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="uk-parent">
+                        <a href="#">PROGRAMS</a>
+                        <ul class="uk-nav-sub">
+                            <li>
+                                <a href="programs.html">PIPELINE</a>
+                            </li>
+                            <li>
+                                <a href="pdf/cantrixil.pdf" target="_blank">CANTRIXIL</a>
+                            </li>
 <!--
-      <ul class="uk-navbar-nav uk-navbar-flip uk-hidden-small">
-        <li class="menu-item">
-          <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
-    </li>
-  <li class="menu-item" data-uk-dropdown>
-    <a href="about.html">About</a>
-    <div class="long-list uk-dropdown uk-dropdown-navbar">
-      <ul class="uk-nav uk-nav-navbar">
-        <li>
-          <a href="ceo-welcome.html">CEO Welcome</a>
-        </li>
-        <li>
-          <a href="management.html">Management</a>
-        </li>
-      </ul>
-    </div>
-  </li>
-
-<li class="menu-item" data-uk-dropdown>
-<a href="technology.html">Technology</a>
-</li>
-
-  <li class="menu-item" data-uk-dropdown>
-    <a href="research.html">Research</a>
-    <div class="long-list uk-dropdown uk-dropdown-navbar">
-      <ul class="uk-nav uk-nav-navbar">
-        <li>
-          <a href="research-data.html">RESEARCH DATA</a>
-        </li>
-        <li>
-          <a href="latest-presentations.html">PRESENTATIONS</a>
-        </li>
-        <li>
-          <a href="publications.html">PUBLICATIONS</a>
-        </li>
-      </ul>
-    </div>
-  </li>
-  <li class="menu-item">
-    <a href="latest-news.html">Latest News</a>
-  </li>
-  <li class="menu-item">
-    <a href="contact.html">Contact</a>
-  </li>
-  </ul>
+                            <li>
+                                <a href="pdf/TRXE-0025January2015.pdf" target="_blank">TRXE-0025</a>
+                            </li>
 -->
-<a href="#mobi-nav" class="uk-navbar-toggle uk-visible-small uk-float-right" data-uk-offcanvas>MENU</a>
-</nav>
-<div id="mobi-nav" class="uk-offcanvas">
-  <div class="uk-offcanvas-bar">
+                            <li>
+                                <a href="pdf/trilexium.pdf" target="_blank">TRILEXIUM</a>
+                            </li>
+                            <li>
+                                <a href="pdf/Anisina.pdf" target="_blank">ANISINA</a>
+                            </li>
+                            <li>
+                                <a href="pdf/Jacob_Hope.pdf" target="_blank">PROJECT JACOB HOPE</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="uk-parent">
+                        <a href="#">INVESTORS</a>
+                        <ul class="uk-nav-sub">
+                            <li><a href="investors.html">INVESTORS PAGE</a>
+                            </li>
 
+                            <li>
+                                <a href="latest-presentations.html">LATEST PRESENTATIONS</a>
+                            </li>
+                            <li>
+                                <a href="media.html">MEDIA</a>
+                            </li>
+                            <li>
+                                <a href="news.html">NEWS</a>
+                            </li>
+                            <li>
+                                <a href="abstracts.html">ABSTRACTS &amp; POSTERS</a>
+                            </li>
+                            <li>
+                                <a href="meip.html">MEIP IN-SPECIE DISTRIBUTION</a>
+                            </li>
+                            <li>
+                                <a href="corporate-governance.html">CORPORATE GOVERNANCE</a>
+                            </li>
+                            <li>
+                                <a href="shares.html">SHARE PRICE</a>
+                            </li>
+                            <!-- <li>
+<a href="http://www.nasdaq.com/symbol/nvgn" target="_blank">SEC FILINGS</a>
+</li> -->
+                            <li>
+                                <a href="http://www.nasdaq.com/symbol/nvgn/sec-filings" target="_blank">SEC FILINGS</a>
+                            </li>
+                            <li>
+                                <a href="http://www.asx.com.au/asx/statistics/announcements.do?by=asxCode&asxCode=NRT&timeframe=D&period=M6" target="_blank">ASX FILINGS</a>
+                            </li>
+                            <!-- <li>
+<a href="asx.html">ASX ANNOUNCEMENTS</a>
+</li> -->
+                            <li>
+                                <a href="analyst-reports.html">ANALYST REPORTS</a>
+                            </li>
+                            <li>
+                                <a href="annual-reports.html">ANNUAL REPORTS</a>
+                            </li>
+                            <li>
+                                <a href="pdf/ExerciseofNovogenOptionsDepositInstructions.pdf" target="_blank">BOOKBUILD OPTIONS</a>
+                            </li>
+                            <li>
+                                <a href="pdf/Rights_Issue_Exercise_Option_Form.pdf" target="_blank">RIGHTS ISSUE OPTIONS</a>
+                            </li>
+                            <li>
+                                <a href="http://www.asx.com.au/asx/research/companyInfo.do?by=asxCode&asxCode=NRT" target="_blank">ASX</a>
+                            </li>
+                            <li>
+                                <a href="http://www.nasdaq.com/symbol/nvgn" target="_blank">NASDAQ</a>
+                            </li>
+                        </ul>
+                    </li>
+                     <li class="uk-parent">
+                        <a href="#">PUBLICATIONS</a>
+                        <ul class="uk-nav-sub">
 
-   <?php
+                            <li>
+                                <a href="media.html">MEDIA</a>
+                            </li>
+                            <li>
+                                <a href="news.html">NEWS</a>
+                            </li>
+                            <li>
+                                <a href="latest-presentations.html">LATEST PRESENTATIONS</a>
+                            </li>
+                            <li>
+                                <a href="abstracts.html">ABSTRACTS &amp; POSTERS</a>
+                            </li>
+                            <li>
+                                <a href="analyst-reports.html">ANALYST REPORTS</a>
+                            </li>
+                            <li>
+                                <a href="annual-reports.html">ANNUAL REPORTS</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="uk-nav-header">Connect with us</li>
+                    <li>
+                        <a href="contact.html"><i class="uk-icon-envelope-o"></i> Contact</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCzNMflCMfqL-kTzanKU-gDQ" target="_blank"><i class="uk-icon-youtube"></i> YouTube</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/Novogen" target="_blank"><i class="uk-icon-twitter"></i> Twitter</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/novogen" target="_blank"><i class="uk-icon-linkedin"></i> LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+<!-- END OFFCANVAS NAVIGATION -->
+<!--        END NAVIGATION -->
 
-$defaults = array(
-  'theme_location'  => 'offcanvas-menu',
-  'menu'            => '',
-  'container'       => false,
-  'container_class' => '',
-  'container_id'    => '',
-  'menu_class'      => 'uk-nav uk-nav-offcanvas uk-nav-parent-icon',
-  'menu_id'         => '',
-  'echo'            => true,
-  'fallback_cb'     => 'wp_page_menu',
-  'before'          => '',
-  'after'           => '',
-  'link_before'     => '',
-  'link_after'      => '',
-  'items_wrap'      => '<ul id="%1$s" class="%2$s" data-uk-nav >%3$s</ul>',
-  'depth'           => 0,
-  'walker'          => new walker_uikits_offcanvas(),
-
-);
-
-wp_nav_menu( $defaults );
-
-?>
-
-<!--
-    <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
-      <li>
-        <a href="">MENU</a>
-      </li>
-      <li class="uk-active">
-        <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
-      </li>
-      <li class="uk-parent">
-        <a href="#">ABOUT</a>
-        <ul class="uk-nav-sub">
-          <li>
-            <a href="about.html">ABOUT PAGE</a>
-          </li>
-          <li>
-            <a href="ceo-welcome.html">CEO WELCOME</a>
-          </li>
-          <li>
-            <a href="management.html">MANAGEMENT</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="technology.html">TECHNOLOGY</a>
-      </li>
-      <li class="uk-parent">
-        <a href="#">RESEARCH</a>
-        <ul class="uk-nav-sub">
-          <li><a href="research-data.html">RESEARCH DATA</a></li>
-          <li>
-            <a href="latest-presentations.html">PRESENTATIONS</a>
-          </li>
-          <li>
-            <a href="publications.html">PUBLICATIONS</a>
-          </li>
-        </ul>
-      </li>
--->
-<!--
-      <li class="uk-nav-header">Connect with us</li>
-      <li>
-        <a href="contact.html"><i class="uk-icon-envelope-o"></i> Contact</a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/channel/UCzNMflCMfqL-kTzanKU-gDQ" target="_blank"><i class="uk-icon-youtube"></i> YouTube</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/cantx_inc" target="_blank"><i class="uk-icon-twitter"></i> Twitter</a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/company/novogen" target="_blank"><i class="uk-icon-linkedin"></i> LinkedIn</a>
-      </li>
--->
-<!--    </ul>-->
-  </div>
-</div>

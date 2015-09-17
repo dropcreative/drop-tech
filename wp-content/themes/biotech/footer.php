@@ -1,6 +1,16 @@
 <footer>
   <div class="uk-grid grey">
-
+  <!-- FOOTER NAVIGATION START -->
+<ul class="uk-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Pipeline</a></li>
+                        <li><a href="investors.html">Investors</a></li>
+                        <li>
+                            <a href="pdf/novogen-privacy-policy.pdf" target="_blank">Privacy Policy</a>
+                        </li>
+                    </ul>
+  <!-- FOOTER NAVIGATION END -->
 
        <div class="uk-width-1-1 uk-width-medium-1-3 uk-vertical-align uk-vertical-align-middle">
 <div class="sign-up">
@@ -28,31 +38,6 @@
     </ul>
     <div class="uk-vertical-align uk-vertical-align-middle uk-width-1-1 uk-width-medium-1-3 footer-nav-wrap" >
 
-        <?php
-
-$defaults = array(
-  'theme_location'  => 'footer-menu',
-  'menu'            => '',
-  'container'       => false,
-  'container_class' => '',
-  'container_id'    => '',
-  'menu_class'      => 'uk-list footer-links',
-  'menu_id'         => '',
-  'echo'            => true,
-  'fallback_cb'     => 'wp_page_menu',
-  'before'          => '',
-  'after'           => '',
-  'link_before'     => '',
-  'link_after'      => '',
-  'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-  'depth'           => 0,
-  'walker'          => '',
-
-);
-
-wp_nav_menu( $defaults );
-
-?>
 
     </div>
 
