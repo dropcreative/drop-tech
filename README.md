@@ -1,1 +1,1 @@
-# drop-tech
+This is a theme in development
