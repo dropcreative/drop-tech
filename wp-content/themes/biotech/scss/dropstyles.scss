@@ -1,6 +1,22 @@
-@import "../../../../bower_components/uikit/scss/uikit-mixins.scss";
+@import "../../../../bower_components/uikit/scss/uikit-mixins";
+@import "../../../../bower_components/uikit/scss/uikit-variables";
 
 // your custom code goes here, e.g. mixins, variables
+@import "../../../../bower_components/uikit/scss/uikit";
+//@import "../../../../bower_components/uikit/scss/components/slideshow";
+@import "../../../../bower_components/uikit/scss/core/grid";
 
-@import "../../../../bower_components/uikit/scss/uikit.scss";
-@import "../../../../bower_components/uikit/scss/components/autocomplete.scss";
+
+
+
+
+.quick{
+    background: #eee;
+    padding-left: 20px;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+table{
+    text-align: left;
+}

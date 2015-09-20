@@ -60,7 +60,7 @@ ga('send', 'pageview');
    <!--START NAVIGATION -->
 <nav class="uk-navbar uk-navbar-attached" data-uk-sticky>
             <a class="logo" href="index.html">
-                <img src="img/novogen-logo.svg" alt="Novogen web site">
+                <img src="<?php echo get_bloginfo('template_directory');?>/img/logo.svg" alt="Company Logo">
             </a>
             <ul class="uk-navbar-nav uk-navbar-flip uk-visible-large">
                 <li class="menu-item">

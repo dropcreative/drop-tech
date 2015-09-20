@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100px" height="30px" viewBox="0 0 100 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>drop-tech-logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="drop-tech-logo" sketch:type="MSArtboardGroup">
+            <g id="novogen-logo" sketch:type="MSLayerGroup" transform="translate(32.000000, 6.000000)" font-size="18" font-family="LondonBetween" fill="#5B5A60" font-weight="normal">
+                <g id="Layer_1_1_" sketch:type="MSTextLayer">
+                    <text id="droptech">
+                        <tspan x="0" y="13">droptech</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="dropcreative-logo" sketch:type="MSLayerGroup" transform="translate(2.000000, 2.000000)">
+                <g id="Group" sketch:type="MSShapeGroup">
+                    <path d="M21.9444444,20.4292929 C19.6969697,23.1060606 16.3131313,24.7979798 12.5505051,24.7979798 C5.75757576,24.7979798 0.227272727,19.2929293 0.227272727,12.4747475 C0.227272727,5.65656566 5.73232323,0.151515152 12.5252525,0.151515152 C16.3383838,0.151515152 19.7474747,1.89393939 22.020202,4.62121212" id="Shape" stroke="#C2C4C6" stroke-width="1.91785"></path>
+                    <path d="M22.020202,4.62121212 C23.7878788,6.74242424 24.8484848,9.49494949 24.8484848,12.4747475 C24.8484848,15.5050505 23.7626263,18.2828283 21.9444444,20.4292929" id="Shape" stroke="#00CCFF" stroke-width="1.91785"></path>
+                    <path d="M12.2727273,4.62121212 C12.2727273,4.52020202 6.84343434,11.969697 7.27272727,15.2020202 C7.67676768,18.3080808 11.0353535,19.3686869 13.7626263,18.9393939 C16.7171717,18.459596 18.7878788,16.0858586 17.8030303,13.0050505 C16.8434343,9.87373737 12.4747475,7.95454545 12.2727273,4.62121212 L12.2727273,4.62121212 Z" id="Shape" stroke="#C2C4C6" stroke-width="0.95175" fill="#00CCFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

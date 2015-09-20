@@ -2,6 +2,7 @@
 
 function droptech_theme_styles(){
 
+    wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/font/font-awesome.css' );
     wp_enqueue_style( 'dropstyles', get_template_directory_uri() . '/css/dropstyles.css' );
 //      PUT THE GOOGLE FONT LINKS IN A SCSS FILE        ////
 }
