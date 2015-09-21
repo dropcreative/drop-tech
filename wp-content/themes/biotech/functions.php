@@ -1,5 +1,7 @@
 <?php
 
+add_theme_support( 'post-thumbnails' );
+
 function droptech_theme_styles(){
 
     wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/font/font-awesome.css' );

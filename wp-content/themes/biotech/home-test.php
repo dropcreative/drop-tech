@@ -1,7 +1,42 @@
-<?php get_header(); ?>
+<?php
 
+/*
+
+     Template Name: Grid Template
+
+  */
+
+get_header(); ?>
 
 <!-- markup for Grid Section-->
+
+
+
+<?php
+
+$args = array(
+    'post_type' => 'grid'
+);
+
+$query = new WP_Query( $args );
+?>
+
+<div  style="background:pink; width: 100%;">
+    <div data-uk-grid data-uk-grid-match >
+    <?php if( $query->have_posts() ): while( $query->have_posts() ) : $query->the_post(); ?>
+
+               <?php $icontext = get_field('icon'); // Get the icon here so we can get the alt value later ?>
+                <div class="uk-width-small-1-1 uk-width-medium-1-3 quick">
+            <a href="<?php the_field( 'external_link' ) ?>" target="_blank">
+                <span class="fa <?php echo $icontext['alt']; // Get the alt value from the icon custom field ?> fa-spin fa-2x"></span>
+                <h2><?php the_field( 'heading' );?></h2><p><?php the_field( 'subheading' );?></p>
+            </a>
+        </div>
+
+    <?php endwhile; endif; wp_reset_postdata(); ?>
+
+    </div>
+</div>
 
 
 <div  style="background:pink; width: 100%;">
