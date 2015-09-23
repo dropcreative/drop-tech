@@ -8,6 +8,60 @@
 
 get_header(); ?>
 
+ <!-- markup for slideshow 1-->
+
+
+       <?php
+
+$args = array(
+
+  'post_type' => 'slideshow'
+
+);
+
+$query = new WP_Query ($args);
+
+
+    ?>
+     <div class="uk-slidenav-position" data-uk-slideshow="{kenburns:true, autoplay:true,autoplayInterval: 7000,}">
+
+      <ul class="uk-slideshow"  >
+
+    <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+
+        <li class="sheight uk-overlay-active" >
+
+          <img  class="uk-invisible"  width="" height="" alt="/*insert text dynamically*/" src="<?php the_field('slide_image'); ?>" >
+
+        <div class="uk-overlay-panel uk-overlay-background  uk-animation-slide-right swidth">
+
+              <h3><?php the_field('slide_main_heading'); ?></h3>
+              <h4>
+                <?php the_field('secondary_heading'); ?>
+              </h4>
+              <a href="<?php the_field('file_for_current_slide'); ?><?php the_field('link_for_current_slide'); ?>" target="_blank" class="uk-button uk-button-primary">More</a>
+
+              </div>
+
+
+
+
+        </li>
+
+<? endwhile; endif; wp_reset_postdata(); ?>
+      </ul>
+</div>
+      <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+      <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+      <ul class="uk-dotnav uk-dotnav-contrast uk-text-center uk-hidden-small">
+        <li data-uk-slideshow-item="0"><a href="#"></a></li>
+        <li data-uk-slideshow-item="1"><a href="#"></a></li>
+        <li data-uk-slideshow-item="2"><a href="#"></a></li>
+        <li data-uk-slideshow-item="3"><a href="#"></a></li>
+      </ul>
+
+
+
 <!-- markup for Grid Section-->
 
 
@@ -90,19 +144,7 @@ if (get_field('table_row_1_column_1')) {
     <?php endwhile; endif; wp_reset_postdata(); ?>
 
     </div>
-</div>
 
 
-<!-- Markup for the Modal Windows -->
 
-<div id="latest-presentation-modal" class="uk-modal">
-    <div class="uk-modal-dialog uk-modal-dialog-large">
-        <a class="uk-modal-close uk-close"></a>
-        <div class="uk-modal-header">CanTx Latest Presentation</div>
-        <div class="videoWrapper">
-            ...<iframe class="uk-responsive-width" width="560" height="349" src="http://www.youtube.com/embed/evsZau6WEXc?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
-            <div class="uk-modal-footer">Thank you for your interest</div>
-        </div>
-    </div>
-</div>
 <?php get_footer(); ?>
