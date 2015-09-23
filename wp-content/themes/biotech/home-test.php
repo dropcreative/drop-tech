@@ -19,17 +19,67 @@ $args = array(
 );
 
 $query = new WP_Query( $args );
+
 ?>
 
 <div  style="background:pink; width: 100%;">
     <div data-uk-grid data-uk-grid-match >
+
     <?php if( $query->have_posts() ): while( $query->have_posts() ) : $query->the_post(); ?>
 
-               <?php $icontext = get_field('icon'); // Get the icon here so we can get the alt value later ?>
-                <div class="uk-width-small-1-1 uk-width-medium-1-3 quick">
-            <a href="<?php the_field( 'external_link' ) ?>" target="_blank">
-                <span class="fa <?php echo $icontext['alt']; // Get the alt value from the icon custom field ?> fa-spin fa-2x"></span>
-                <h2><?php the_field( 'heading' );?></h2><p><?php the_field( 'subheading' );?></p>
+   <?php
+if (get_field('table_row_1_column_1')) {
+    echo
+        " <div class='uk-width-small-1-1 uk-width-medium-1-3 quick'>
+            <a href='";?><?php the_field( 'table_link' ); ?><?php echo"' target='_blank'>
+            <table class='uk-table-striped'>
+                    <thead> </thead>
+                    <caption align='bottom' class='uk-text-muted'>";?><?php the_field( 'table_information' ); ?><?php echo "</caption>
+                    <tbody>
+                        <tr>
+                            <th>";?><?php the_field( 'table_row_1_column_1' ); ?><?php echo "</th>
+                            <td>";?><?php the_field( 'table_row_1_column_2' ); ?><?php echo "</td>
+                        </tr>
+                        <tr>
+                            <th>";?><?php the_field( 'table_row_2_column_1' ); ?><?php echo "</th>
+                            <td>";?><?php the_field( 'table_row_2_column_2' ); ?><?php echo "</td>
+                        </tr>
+                        <tr>
+                            <th><span class='long-text'>";?><?php the_field( 'table_row_3_column_1' ); ?><?php echo "</span><span class='brief-text'></span>
+                            </th>
+                            <td>";?><?php the_field( 'table_row_3_column_2' ); ?><?php echo "</td>
+                        </tr>
+                        <tr>
+                            <th><span class='long-text'>";?><?php the_field( 'table_row_4_column_1' ); ?><?php echo "</span><span class='brief-text'></span>
+                            </th>
+                            <td>";?><?php the_field( 'table_row_4_column_2' ); ?><?php echo "</td>
+                        </tr>
+                        <tr>
+                            <th><span class='long-text'>";?><?php the_field( 'table_row_5_column_1' ); ?><?php echo "</span><span class='brief-text'></span>
+                            </th>
+                            <td>";?><?php the_field( 'table_row_5_column_2' ); ?><?php echo "</td>
+                        </tr>
+                        <tr>
+                            <th><span class='long-text'>";?><?php the_field( 'table_row_6_column_1' ); ?><?php echo "</span><span class='brief-text'>";?><?php the_field( 'table_row_1_column_1' ); ?><?php echo "</span>
+                            </th>
+                            <td>";?><?php the_field( 'table_row_6_column_2' ); ?><?php echo "</td>
+                        </tr>
+                        <tr>
+                            <th>";?><?php the_field( 'table_row_7_column_1' ); ?><?php echo "</th>
+                            <td>";?><?php the_field( 'table_row_7_column_2' ); ?><?php echo "</td>
+                        </tr>
+                    </tbody>
+                </table>";
+} else {
+             echo
+                 "<div class='uk-width-small-1-1 uk-width-medium-1-3 quick'>";?>
+                 <?php $icontext = get_field('icon'); // Get the icon here so we can get the alt value later ?>
+           <?php echo"<a href='";?><?php the_field( 'external_link' ); ?><?php echo"' target='_blank'>
+                <span class='fa";?> <?php echo $icontext["alt"]; // Get the alt value from the icon custom field ?><?php echo "fa-spin fa-2x'></span>
+                <h2>";?><?php the_field( 'heading' );?><?php echo "</h2><p>";?><?php the_field( 'subheading' );?><?php echo "</p>
+                <p><em>";?><?php the_field( 'attention_text' ); ?><?php echo "</em></p>";
+}
+?>
             </a>
         </div>
 
@@ -38,96 +88,6 @@ $query = new WP_Query( $args );
     </div>
 </div>
 
-
-<div  style="background:pink; width: 100%;">
-    <div data-uk-grid data-uk-grid-match >
-        <div class="uk-width-small-1-1 uk-width-medium-1-3 quick">
-            <a href="pdf/investorFactSheetAndTimeline.pdf" target="_blank">
-                <span class="fa fa-cog fa-spin fa-2x"></span>
-                <h2>Drop Report</h2><p>Read about our latest report</p>
-            </a>
-        </div>
-        <div class="uk-width-small-1-1 uk-width-medium-1-3 quick">
-            <a href="shares.html" target="_blank">
-                <table class="uk-table-striped">
-                    <thead> </thead>
-                    <caption align="bottom" class="uk-text-muted">*As at 17 September  2015 | °As at 17 September 2015</caption>
-                    <tbody>
-                        <tr>
-                            <th>ASX code</th>
-                            <td> NRT</td>
-                        </tr>
-                        <tr>
-                            <th>NASDAQ code</th>
-                            <td>NVGN</td>
-                        </tr>
-                        <tr>
-                            <th><span class="long-text">Share price AUD* - 17/SEP/2015</span><span class="brief-text">Shares* AUD</span>
-                            </th>
-                            <td>14.5cents</td>
-                        </tr>
-                        <tr>
-                            <th><span class="long-text">Share price USD° - 17/SEP/2015</span><span class="brief-text">Shares^ USA</span>
-                            </th>
-                            <td>$2.79</td>
-                        </tr>
-                        <tr>
-                            <th><span class="long-text">Number of shares</span><span class="brief-text">No. of Shares</span>
-                            </th>
-                            <td>~424m</td>
-                        </tr>
-                        <tr>
-                            <th><span class="long-text">Market capitalisation AUD</span><span class="brief-text">Market Cap AUD</span>
-                            </th>
-                            <td>~$61.49m</td>
-                        </tr>
-                        <tr>
-                            <th>52 week range</th>
-                            <td>46c/8cents</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </a>
-        </div>
-        <div class="uk-width-small-1-1 uk-width-medium-1-3 quick">
-            <a href="blog.html">
-                <span class="fa fa-cog fa-spin fa-2x"></span>
-                <h2>Drop Presentation</h2><p>Read our Latest Presentation</p></a>
-        </div>
-        <div class="uk-width-small-1-1 uk-width-medium-1-3 quick">
-            <span class="fa fa-cog fa-spin fa-2x"></span>
-
-            <h2>Drop Announcements</h2>
-            <p>View our latest announcements here</p>
-            </a>
-    </div>
-    <div class="uk-width-small-1-1 uk-width-medium-1-3 quick">
-        <a href="events.html">
-            <span class="fa fa-cog fa-spin fa-2x"></span>
-            <h2>Drop Overview</h2>
-            <p>Some relevant Content here</p>
-        </a>
-    </div>
-    <div class="uk-width-small-1-1 uk-width-medium-1-3 quick">
-        <a href="blog.html">
-            <span class="fa fa-cog fa-spin fa-2x"></span>
-            <h2>Current Events</h2><p>Read about our events</p></a>
-    </div>
-    <div class="uk-width-small-1-1 uk-width-medium-1-3 quick">
-        <span class="fa fa-cog fa-spin fa-2x"></span>
-        <h2>Drop Newsletter</h2>
-        <p>Some relevant Content here</p>
-        </a>
-</div>
-<div class="uk-width-small-1-1 uk-width-medium-2-3 quick">
-    <a href="events.html">
-        <span class="fa fa-cog fa-spin fa-2x"></span>
-        <h2>Investor Information</h2>
-        <p>Some relevant Content here</p>
-    </a>
-</div>
-</div>
-</div>
 
 <!-- Markup for the Modal Windows -->
 

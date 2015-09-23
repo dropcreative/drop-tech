@@ -17,6 +17,9 @@ function droptech_theme_scripts(){
 
 }
 
-add_action('wp_enqueue_scripts', 'droptech_theme_scripts')
+add_action('wp_enqueue_scripts', 'droptech_theme_scripts');
+
+
+
 
 ?>
