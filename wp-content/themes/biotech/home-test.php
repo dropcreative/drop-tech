@@ -70,7 +70,7 @@ if (get_field('table_row_1_column_1')) {
                         </tr>
                     </tbody>
                 </table>";
-} else {
+} elseif(get_field('heading')){
              echo
                  "<div class='uk-width-small-1-1 uk-width-medium-1-3 quick'>";?>
                  <?php $icontext = get_field('icon'); // Get the icon here so we can get the alt value later ?>
@@ -78,6 +78,10 @@ if (get_field('table_row_1_column_1')) {
                 <span class='fa";?> <?php echo $icontext["alt"]; // Get the alt value from the icon custom field ?><?php echo "fa-spin fa-2x'></span>
                 <h2>";?><?php the_field( 'heading' );?><?php echo "</h2><p>";?><?php the_field( 'subheading' );?><?php echo "</p>
                 <p><em>";?><?php the_field( 'attention_text' ); ?><?php echo "</em></p>";
+}else{
+             echo
+                 "<div class='uk-width-small-1-1 uk-width-medium-1-3 quick'>
+                <div>";?><?php the_field( 'custom_content' );?><?php echo "</div>";
 }
 ?>
             </a>
