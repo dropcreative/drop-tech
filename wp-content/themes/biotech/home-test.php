@@ -23,7 +23,7 @@ $query = new WP_Query ($args);
 
 
     ?>
-     <div class="uk-slidenav-position" data-uk-slideshow="{kenburns:true, autoplay:true,autoplayInterval: 7000,}">
+     <div class="uk-slidenav-position uk-text-center" data-uk-slideshow="{kenburns:true, autoplay:true,autoplayInterval: 7000,}">
 
       <ul class="uk-slideshow"  >
 
@@ -33,7 +33,7 @@ $query = new WP_Query ($args);
 
           <img  class="uk-invisible"  width="" height="" alt="/*insert text dynamically*/" src="<?php the_field('slide_image'); ?>" >
 
-        <div class="uk-overlay-panel uk-overlay-background  uk-animation-slide-right swidth">
+        <div class="uk-overlay-panel uk-overlay-background  uk-animation-slide-right  uk-animation-5 swidth">
 
               <h3><?php the_field('slide_main_heading'); ?></h3>
               <h4>
@@ -50,16 +50,26 @@ $query = new WP_Query ($args);
 
 <? endwhile; endif; wp_reset_postdata(); ?>
       </ul>
-</div>
       <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
       <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
-      <ul class="uk-dotnav uk-dotnav-contrast uk-text-center uk-hidden-small">
-        <li data-uk-slideshow-item="0"><a href="#"></a></li>
+      <ul class="uk-dotnav uk-dotnav-contrast uk-flex-center uk-hidden-small dotnav">
+           <?php
+$postCount = 0; //Count posts starting from 0
+if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+<?php
+?>
+        <li data-uk-slideshow-item="<?php echo $postCount; ?>"><a href="#"></a></li>
+        <?php $postCount++;?>
+        <? endwhile; endif; wp_reset_postdata(); ?>
+
+<!--
         <li data-uk-slideshow-item="1"><a href="#"></a></li>
         <li data-uk-slideshow-item="2"><a href="#"></a></li>
         <li data-uk-slideshow-item="3"><a href="#"></a></li>
+-->
       </ul>
 
+</div>
 
 
 <!-- markup for Grid Section-->

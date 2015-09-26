@@ -4,12 +4,18 @@
 // your custom code goes here, e.g. mixins, variables
 @import "../../../../bower_components/uikit/scss/uikit";
 @import "../../../../bower_components/uikit/scss/components/slideshow";
+@import "../../../../bower_components/uikit/scss/components/slidenav";
+@import "../../../../bower_components/uikit/scss/components/dotnav";
+
+
 @import "../../../../bower_components/uikit/scss/core/cover";
 //@import "../../../../bower_components/uikit/scss/core/overlay";
 @import "../../../../bower_components/uikit/scss/core/grid";
 
 
-
+$aqua: #0D8D8F;
+$dark: #5f5f5f;
+$red: #a11d29;
 
 
 .quick{
@@ -32,5 +38,29 @@ table{
 }
 
 .swidth{
-    width:600px;
+    width:85%;
+    max-width:1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.dotnav{
+    background: $dark;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    li{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    li>a{
+    height: 1.3em;
+    width: 1.3em;
+    background: rgba(255, 255, 255, .4);
+  }
+    >li.uk-active>a{
+    background: rgba(255, 255, 255, .9);
+    }
 }
