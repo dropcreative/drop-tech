@@ -71,6 +71,58 @@ if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(
 
 </div>
 
+<!-- markup for second slideshow-->
+
+
+<?php
+
+$args = array(
+
+  'post_type' => 'textslide'
+
+);
+
+$query = new WP_Query ($args);
+
+
+    ?>
+     <div class="uk-slidenav-position uk-text-center" data-uk-slideshow="{fade:true, autoplay:true,autoplayInterval: 7000,}">
+
+      <ul class="uk-slideshow"  >
+
+    <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+
+        <li class="uk-vertical-align textslide" style="background-color:<?php the_field( 'background_color' );?>">
+<div class="uk-vertical-align-middle uk-text-center textslide-container" >
+
+   <h2><?php the_field( 'heading' ); ?></h2>
+<h3> <?php the_field( 'subheading' ); ?></h3><br>
+<a href="<?php the_field( 'website_link' );?><?php the_field( 'file_link' );?>" target="_blank" class="uk-button uk-button-secondary uk-hidden<?php the_field( 'website_link' );?><?php the_field( 'file_link' );?>">Open</a><!-- uk-hidden used here if custom field is empty! -->
+                    </div>
+                </li>
+
+<? endwhile; endif; wp_reset_postdata(); ?>
+      </ul>
+      <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+      <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+      <ul class="uk-dotnav uk-dotnav-contrast uk-flex-center uk-hidden-small dotnav">
+           <?php
+$postCount = 0; //Count posts starting from 0
+if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+<?php
+?>
+        <li data-uk-slideshow-item="<?php echo $postCount; ?>"><a href="#"></a></li>
+        <?php $postCount++;?>
+        <? endwhile; endif; wp_reset_postdata(); ?>
+
+<!--
+        <li data-uk-slideshow-item="1"><a href="#"></a></li>
+        <li data-uk-slideshow-item="2"><a href="#"></a></li>
+        <li data-uk-slideshow-item="3"><a href="#"></a></li>
+-->
+      </ul>
+
+</div>
 
 <!-- markup for Grid Section-->
 
@@ -96,7 +148,7 @@ if (get_field('table_row_1_column_1')) {
     echo
         " <div class='uk-width-small-1-1 uk-width-medium-1-3 quick'>
             <a href='";?><?php the_field( 'table_link' ); ?><?php echo"' target='_blank'>
-            <table class='uk-table-striped'>
+            <table class='uk-table-striped droptable'>
                     <thead> </thead>
                     <caption align='bottom' class='uk-text-muted'>";?><?php the_field( 'table_information' ); ?><?php echo "</caption>
                     <tbody>

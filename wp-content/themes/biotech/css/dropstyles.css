@@ -9103,6 +9103,11 @@ a.uk-thumbnail:focus {
 
   .uk-pull-9-10 {
     left: -90%; } }
+h1, h2, h3, h4, h5, h6, p {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; }
+
 .quick {
   background: #eee;
   padding-left: 20px;
@@ -9114,9 +9119,6 @@ table {
 
 .sheight {
   height: 300px; }
-
-.zindex {
-  z-index: 1100; }
 
 .swidth {
   width: 85%;
@@ -9141,5 +9143,23 @@ table {
     background: rgba(255, 255, 255, 0.4); }
   .dotnav > li.uk-active > a {
     background: rgba(255, 255, 255, 0.9); }
+
+.textslide {
+  width: 100%;
+  color: #fff; }
+  .textslide h1, .textslide h2, .textslide h3, .textslide h4, .textslide h5, .textslide h6, .textslide p {
+    color: #fff; }
+
+.textslide-container {
+  width: 85%;
+  max-width: 1000px;
+  margin-top: 40px;
+  margin-bottom: 40px; }
+
+.droptable {
+  width: 100%; }
+  .droptable td {
+    text-align: right;
+    padding-right: 15px; }
 
 /*# sourceMappingURL=dropstyles.css.map */
