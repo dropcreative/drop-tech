@@ -1,6 +1,22 @@
 @import "../../../../bower_components/uikit/scss/uikit-mixins";
 @import "../../../../bower_components/uikit/scss/uikit-variables";
-
+$aqua: #0D8D8F;
+$dark: #5f5f5f;
+$red: #a11d29;
+$light: #fff;
+$button-primary-background:#0D8D8F;
+$navbar-nav-hover-background:$dark;
+$navbar-nav-hover-color: $light;
+$nav-navbar-hover-background:#0D8D8F;
+$nav-navbar-hover-color: $light;
+@mixin legibility {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+h1,h2,h3,h4,h5,h6,p{
+    @include legibility;
+}
 // your custom code goes here, e.g. mixins, variables
 @import "../../../../bower_components/uikit/scss/uikit";
 @import "../../../../bower_components/uikit/scss/components/slideshow";
@@ -13,30 +29,82 @@
 @import "../../../../bower_components/uikit/scss/core/grid";
 
 
-$aqua: #0D8D8F;
-$dark: #5f5f5f;
-$red: #a11d29;
-
-@mixin legibility {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+//SOCIAL BAR CUSTOMIZATION
+.social-bar{
+    background: $dark;
 }
 
-h1,h2,h3,h4,h5,h6,p{
-    @include legibility;
+//NAVBAR CUSTOMIZATION
+
+.uk-navbar{
+    background: $light;
+    height: 50px;
+    .logo{
+        img{
+            height: 100%;
+        }
+    }
+    .uk-navbar-nav{
+        text-transform: uppercase;
+        margin-top: 10px;
+        li{
+            margin: 0;
+            padding: 0;
+            a{
+//                margin: 0;
+                margin-right: 10px;
+                border: 1px solid $dark;
+                height: 28px;
+                line-height: 26px;
+            }
+        }
+    }
 }
+  .uk-dropdown-navbar{
+    background: rgba(255, 255, 255, 0);
+    ul{
+      background: rgba(0, 0, 0, .0);
+//        white-space: nowrap;
+      li{
+        margin-bottom: 10px;
+         margin-left: auto;
+          margin-right: auto;
+        a{
+            margin-top: 10px;
+            color: $dark;
+            background: $light;
+          &:hover{
+            background: $dark;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+.uk-navbar-toggle{
+    margin-top: 6px;
+}
+//.NAVBAR CUSTOMIZATION END
+
+
+// GRIDS GENERAL START
 .quick{
     background: #eee;
     padding-left: 20px;
     border-left: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
 }
+// GRIDS GENERAL FINISH
 
-table{
-    text-align: left;
+// GRID CUSTOM CONTENT START
+.customgrid{
+    margin-top: 25px;
 }
+// GRID CUSTOM CONTENT END
 
+
+// SLIDES START
 .sheight{
     height: 300px;
 }
@@ -83,11 +151,32 @@ table{
     margin-top: 40px;
     margin-bottom: 40px;
 }
+
+// SLIDES FINISH
+
+// TABLE START
+table{
+    text-align: left;
+}
 .droptable{
     width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
     td{
         text-align: right;
         padding-right: 15px;
     }
-}
+    .thead{
+        text-transform: uppercase;
 
+    }
+}
+//TABLE FINISH
+
+
+//FOOTER START
+.code-of-best-practice{
+    img{
+        height: 20px;
+    }
+    }

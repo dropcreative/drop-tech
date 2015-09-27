@@ -138,7 +138,7 @@ $query = new WP_Query( $args );
 
 ?>
 
-<div  style="background:pink; width: 100%;">
+<div  class="grid-wrap">
     <div data-uk-grid data-uk-grid-match >
 
     <?php if( $query->have_posts() ): while( $query->have_posts() ) : $query->the_post(); ?>
@@ -152,6 +152,7 @@ if (get_field('table_row_1_column_1')) {
                     <thead> </thead>
                     <caption align='bottom' class='uk-text-muted'>";?><?php the_field( 'table_information' ); ?><?php echo "</caption>
                     <tbody>
+                    <tr><th class='uk-text-muted thead'>";?><?php the_field( 'table_heading' );?><?php echo"</th></tr>
                         <tr>
                             <th>";?><?php the_field( 'table_row_1_column_1' ); ?><?php echo "</th>
                             <td>";?><?php the_field( 'table_row_1_column_2' ); ?><?php echo "</td>
@@ -197,7 +198,7 @@ if (get_field('table_row_1_column_1')) {
 }else{
              echo
                  "<div class='uk-width-small-1-1 uk-width-medium-1-3 quick'>
-                <div>";?><?php the_field( 'custom_content' );?><?php echo "</div>";
+                <div class='customgrid'>";?><?php the_field( 'custom_content' );?><?php echo "</div>";
 }
 ?>
             </a>

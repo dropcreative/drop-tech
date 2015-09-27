@@ -1,4 +1,9 @@
 @charset "UTF-8";
+h1, h2, h3, h4, h5, h6, p {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; }
+
 /* ========================================================================
    Component: Base
  ========================================================================== */
@@ -1689,7 +1694,7 @@ ul.uk-nav-sub {
  */
 .uk-nav-navbar > li > a:hover,
 .uk-nav-navbar > li > a:focus {
-  background: #00a8e6;
+  background: #0D8D8F;
   color: #fff;
   /* 2 */
   outline: none; }
@@ -1833,8 +1838,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-navbar-nav > li:hover > a,
 .uk-navbar-nav > li > a:focus,
 .uk-navbar-nav > li.uk-open > a {
-  background-color: #f5f5f5;
-  color: #444;
+  background-color: #5f5f5f;
+  color: #fff;
   /* 3 */
   outline: none; }
 
@@ -3306,7 +3311,7 @@ select.uk-form-width-mini {
  * Modifier: `uk-button-primary`
  */
 .uk-button-primary {
-  background-color: #00a8e6;
+  background-color: #0D8D8F;
   color: #fff; }
 
 /* Hover */
@@ -9103,10 +9108,44 @@ a.uk-thumbnail:focus {
 
   .uk-pull-9-10 {
     left: -90%; } }
-h1, h2, h3, h4, h5, h6, p {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility; }
+.social-bar {
+  background: #5f5f5f; }
+
+.uk-navbar {
+  background: #fff;
+  height: 50px; }
+  .uk-navbar .logo img {
+    height: 100%; }
+  .uk-navbar .uk-navbar-nav {
+    text-transform: uppercase;
+    margin-top: 10px; }
+    .uk-navbar .uk-navbar-nav li {
+      margin: 0;
+      padding: 0; }
+      .uk-navbar .uk-navbar-nav li a {
+        margin-right: 10px;
+        border: 1px solid #5f5f5f;
+        height: 28px;
+        line-height: 26px; }
+
+.uk-dropdown-navbar {
+  background: rgba(255, 255, 255, 0); }
+  .uk-dropdown-navbar ul {
+    background: transparent; }
+    .uk-dropdown-navbar ul li {
+      margin-bottom: 10px;
+      margin-left: auto;
+      margin-right: auto; }
+      .uk-dropdown-navbar ul li a {
+        margin-top: 10px;
+        color: #5f5f5f;
+        background: #fff; }
+        .uk-dropdown-navbar ul li a:hover {
+          background: #5f5f5f;
+          color: #fff; }
+
+.uk-navbar-toggle {
+  margin-top: 6px; }
 
 .quick {
   background: #eee;
@@ -9114,8 +9153,8 @@ h1, h2, h3, h4, h5, h6, p {
   border-left: 1px solid #ddd;
   border-bottom: 1px solid #ddd; }
 
-table {
-  text-align: left; }
+.customgrid {
+  margin-top: 25px; }
 
 .sheight {
   height: 300px; }
@@ -9156,10 +9195,20 @@ table {
   margin-top: 40px;
   margin-bottom: 40px; }
 
+table {
+  text-align: left; }
+
 .droptable {
-  width: 100%; }
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px; }
   .droptable td {
     text-align: right;
     padding-right: 15px; }
+  .droptable .thead {
+    text-transform: uppercase; }
+
+.code-of-best-practice img {
+  height: 20px; }
 
 /*# sourceMappingURL=dropstyles.css.map */
