@@ -139,7 +139,7 @@ $query = new WP_Query( $args );
 ?>
 
 <div  class="grid-wrap">
-    <div data-uk-grid data-uk-grid-match >
+    <div data-uk-grid data-uk-grid-match="{row: false}">
 
     <?php if( $query->have_posts() ): while( $query->have_posts() ) : $query->the_post(); ?>
 
