@@ -1,6 +1,7 @@
 @import "../../../../bower_components/uikit/scss/uikit-mixins";
 @import "../../../../bower_components/uikit/scss/uikit-variables";
 $aqua: #0D8D8F;
+$aqua-hover: rgba(29,173,165,0.1);
 $dark: #5f5f5f;
 $red: #a11d29;
 $light: #fff;
@@ -9,6 +10,7 @@ $navbar-nav-hover-background:$dark;
 $navbar-nav-hover-color: $light;
 $nav-navbar-hover-background:#0D8D8F;
 $nav-navbar-hover-color: $light;
+$grid-background-color: #eee;
 @mixin legibility {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -93,12 +95,27 @@ h1,h2,h3,h4,h5,h6,p{
 
 
 // GRIDS GENERAL START
+
+.grid-wrap{
+    background: $grid-background-color;
+}
 .quick{
     background: #eee;
     padding-left: 20px;
     border-left: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
+    &:hover{
+        background: transparentize($aqua, 0.85);
+    }
+    a{
+    &:hover{
+        text-decoration: none;
+        color:#000;
+    }
+    }
 }
+
+
 // GRIDS GENERAL FINISH
 
 // GRID CUSTOM CONTENT START

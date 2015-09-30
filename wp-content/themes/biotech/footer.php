@@ -1,4 +1,16 @@
 <footer>
+
+ <form class="uk-form">
+
+    <div class="uk-grid">
+        <div class="uk-width-1-4"><input type="text" placeholder="Name" class="uk-width-1-1"></div>
+        <div class="uk-width-1-4"><input type="text" placeholder="Email Address" class="uk-width-1-1"></div>
+        <div class="uk-width-1-4"><input type="text" placeholder=" Somethin" class="uk-width-1-1"></div>
+        <div class="uk-width-1-4"><button class="uk-button">Submit</button></div>
+    </div>
+
+</form>
+
   <div class="uk-grid grey">
   <!-- FOOTER NAVIGATION START -->
 <ul class="uk-list">

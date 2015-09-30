@@ -146,8 +146,8 @@ $query = new WP_Query( $args );
    <?php
 if (get_field('table_row_1_column_1')) {
     echo
-        " <div class='uk-width-small-1-1 uk-width-medium-1-";?><?php the_field( 'grid_width' ); echo "quick'>
-            <a href='";?><?php the_field( 'table_link' ); ?><?php echo"' target='_blank'>
+        " <div class='uk-width-small-1-1 uk-width-medium-1-";?><?php the_field( 'grid_width' ); echo " quick'>
+            <a class='grid-link' href='";?><?php the_field( 'table_link' ); ?><?php echo"' target='_blank'>
             <table class='uk-table-striped droptable'>
                     <thead> </thead>
                     <caption align='bottom' class='uk-text-muted'>";?><?php the_field( 'table_information' );  echo "</caption>
@@ -191,14 +191,14 @@ if (get_field('table_row_1_column_1')) {
              echo
                  "<div class='uk-width-small-1-1 uk-width-medium-1-";?><?php the_field( 'grid_width' ); echo " quick'>";?>
                  <?php $icontext = get_field('icon'); // Get the icon here so we can get the alt value later
-    echo"<a href='";?><?php the_field( 'external_link' );  echo"' target='_blank'>
+    echo"<a class='grid-link' href='";?><?php the_field( 'external_link' );  echo"' target='_blank'>
                 <span class='fa";?> <?php echo $icontext["alt"]; // Get the alt value from the icon custom field
     echo "fa-spin fa-2x'></span>
                 <h2>";?><?php the_field( 'heading' );?><?php echo "</h2><p>";?><?php the_field( 'subheading' ); echo "</p>
                 <p><em>";?><?php the_field( 'attention_text' ); echo "</em></p>";
 }else{
              echo
-                 "<div class='uk-width-small-1-1 uk-width-medium-1-";?><?php the_field( 'grid_width' ); echo "  quick'>
+                 "<div class='uk-width-small-1-1 uk-width-medium-1-";?><?php the_field( 'grid_width' ); echo " quick'>
                 <div class='customgrid'>";?><?php the_field( 'custom_content' );  echo "</div>";
 }
 ?>
@@ -208,7 +208,7 @@ if (get_field('table_row_1_column_1')) {
     <?php endwhile; endif; wp_reset_postdata(); ?>
 
     </div>
-
+<div><?php echo do_shortcode('[ninja_forms id=1]'); ?></div>
 
 
 <?php get_footer(); ?>

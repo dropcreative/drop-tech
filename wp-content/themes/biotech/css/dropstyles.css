@@ -9147,11 +9147,19 @@ a.uk-thumbnail:focus {
 .uk-navbar-toggle {
   margin-top: 6px; }
 
+.grid-wrap {
+  background: #eee; }
+
 .quick {
   background: #eee;
   padding-left: 20px;
   border-left: 1px solid #ddd;
   border-bottom: 1px solid #ddd; }
+  .quick:hover {
+    background: rgba(13, 141, 143, 0.15); }
+  .quick a:hover {
+    text-decoration: none;
+    color: #000; }
 
 .customgrid {
   margin-top: 25px; }
