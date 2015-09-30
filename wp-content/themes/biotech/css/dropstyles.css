@@ -9208,6 +9208,9 @@ table {
   .droptable .thead {
     text-transform: uppercase; }
 
+footer {
+  background: #5f5f5f; }
+
 .code-of-best-practice img {
   height: 20px; }
 

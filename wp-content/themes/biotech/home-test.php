@@ -146,59 +146,60 @@ $query = new WP_Query( $args );
    <?php
 if (get_field('table_row_1_column_1')) {
     echo
-        " <div class='uk-width-small-1-1 uk-width-medium-1-3 quick'>
+        " <div class='uk-width-small-1-1 uk-width-medium-1-";?><?php the_field( 'grid_width' ); echo "quick'>
             <a href='";?><?php the_field( 'table_link' ); ?><?php echo"' target='_blank'>
             <table class='uk-table-striped droptable'>
                     <thead> </thead>
-                    <caption align='bottom' class='uk-text-muted'>";?><?php the_field( 'table_information' ); ?><?php echo "</caption>
+                    <caption align='bottom' class='uk-text-muted'>";?><?php the_field( 'table_information' );  echo "</caption>
                     <tbody>
-                    <tr><th class='uk-text-muted thead'>";?><?php the_field( 'table_heading' );?><?php echo"</th></tr>
+                    <tr><th class='uk-text-muted thead'>";?><?php the_field( 'table_heading' ); echo"</th></tr>
                         <tr>
-                            <th>";?><?php the_field( 'table_row_1_column_1' ); ?><?php echo "</th>
-                            <td>";?><?php the_field( 'table_row_1_column_2' ); ?><?php echo "</td>
+                            <th>";?><?php the_field( 'table_row_1_column_1' );  echo "</th>
+                            <td>";?><?php the_field( 'table_row_1_column_2' );  echo "</td>
                         </tr>
                         <tr>
-                            <th>";?><?php the_field( 'table_row_2_column_1' ); ?><?php echo "</th>
-                            <td>";?><?php the_field( 'table_row_2_column_2' ); ?><?php echo "</td>
+                            <th>";?><?php the_field( 'table_row_2_column_1' );  echo "</th>
+                            <td>";?><?php the_field( 'table_row_2_column_2' ); echo "</td>
                         </tr>
                         <tr>
-                            <th><span class='long-text'>";?><?php the_field( 'table_row_3_column_1' ); ?><?php echo "</span><span class='brief-text'></span>
+                            <th><span class='long-text'>";?><?php the_field( 'table_row_3_column_1' );  echo "</span><span class='brief-text'></span>
                             </th>
-                            <td>";?><?php the_field( 'table_row_3_column_2' ); ?><?php echo "</td>
+                            <td>";?><?php the_field( 'table_row_3_column_2' );  echo "</td>
                         </tr>
                         <tr>
-                            <th><span class='long-text'>";?><?php the_field( 'table_row_4_column_1' ); ?><?php echo "</span><span class='brief-text'></span>
+                            <th><span class='long-text'>";?><?php the_field( 'table_row_4_column_1' );  echo "</span><span class='brief-text'></span>
                             </th>
-                            <td>";?><?php the_field( 'table_row_4_column_2' ); ?><?php echo "</td>
+                            <td>";?><?php the_field( 'table_row_4_column_2' ); echo "</td>
                         </tr>
                         <tr>
-                            <th><span class='long-text'>";?><?php the_field( 'table_row_5_column_1' ); ?><?php echo "</span><span class='brief-text'></span>
+                            <th><span class='long-text'>";?><?php the_field( 'table_row_5_column_1' ); echo "</span><span class='brief-text'></span>
                             </th>
-                            <td>";?><?php the_field( 'table_row_5_column_2' ); ?><?php echo "</td>
+                            <td>";?><?php the_field( 'table_row_5_column_2' ); echo "</td>
                         </tr>
                         <tr>
-                            <th><span class='long-text'>";?><?php the_field( 'table_row_6_column_1' ); ?><?php echo "</span><span class='brief-text'>";?><?php the_field( 'table_row_1_column_1' ); ?><?php echo "</span>
+                            <th><span class='long-text'>";?><?php the_field( 'table_row_6_column_1' ); echo "</span><span class='brief-text'>";?><?php the_field( 'table_row_1_column_1' ); echo "</span>
                             </th>
-                            <td>";?><?php the_field( 'table_row_6_column_2' ); ?><?php echo "</td>
+                            <td>";?><?php the_field( 'table_row_6_column_2' ); echo "</td>
                         </tr>
                         <tr>
-                            <th>";?><?php the_field( 'table_row_7_column_1' ); ?><?php echo "</th>
-                            <td>";?><?php the_field( 'table_row_7_column_2' ); ?><?php echo "</td>
+                            <th>";?><?php the_field( 'table_row_7_column_1' );  echo "</th>
+                            <td>";?><?php the_field( 'table_row_7_column_2' );  echo "</td>
                         </tr>
                     </tbody>
                 </table>";
 } elseif(get_field('heading')){
              echo
-                 "<div class='uk-width-small-1-1 uk-width-medium-1-3 quick'>";?>
-                 <?php $icontext = get_field('icon'); // Get the icon here so we can get the alt value later ?>
-           <?php echo"<a href='";?><?php the_field( 'external_link' ); ?><?php echo"' target='_blank'>
-                <span class='fa";?> <?php echo $icontext["alt"]; // Get the alt value from the icon custom field ?><?php echo "fa-spin fa-2x'></span>
-                <h2>";?><?php the_field( 'heading' );?><?php echo "</h2><p>";?><?php the_field( 'subheading' );?><?php echo "</p>
-                <p><em>";?><?php the_field( 'attention_text' ); ?><?php echo "</em></p>";
+                 "<div class='uk-width-small-1-1 uk-width-medium-1-";?><?php the_field( 'grid_width' ); echo " quick'>";?>
+                 <?php $icontext = get_field('icon'); // Get the icon here so we can get the alt value later
+    echo"<a href='";?><?php the_field( 'external_link' );  echo"' target='_blank'>
+                <span class='fa";?> <?php echo $icontext["alt"]; // Get the alt value from the icon custom field
+    echo "fa-spin fa-2x'></span>
+                <h2>";?><?php the_field( 'heading' );?><?php echo "</h2><p>";?><?php the_field( 'subheading' ); echo "</p>
+                <p><em>";?><?php the_field( 'attention_text' ); echo "</em></p>";
 }else{
              echo
-                 "<div class='uk-width-small-1-1 uk-width-medium-1-3 quick'>
-                <div class='customgrid'>";?><?php the_field( 'custom_content' );?><?php echo "</div>";
+                 "<div class='uk-width-small-1-1 uk-width-medium-1-";?><?php the_field( 'grid_width' ); echo "  quick'>
+                <div class='customgrid'>";?><?php the_field( 'custom_content' );  echo "</div>";
 }
 ?>
             </a>
